@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Docs | Barac io Premium React + Redux Admin Template</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Barac io React Admin Template made using React + Redux with Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any Dasboard needs." />
+    <meta name="keywords" content="react, redux, flat ui, admin, Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="Amit Gorasiya" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <!-- prism css -->
+    <link rel="stylesheet" href="assets/plugins/prism/css/prism.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .pcoded-navbar .pcoded-inner-navbar>li.active>a,
+        .pcoded-navbar .pcoded-inner-navbar>li.pcoded-trigger>a {
+            background: transparent;
+        }
+
+        .pcoded-navbar .pcoded-inner-navbar>li.active>a,
+        .pcoded-navbar .pcoded-inner-navbar>li>a.active {
+            background: #333f54;
+            /* box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2); */
+            color: #fff;
+            position: relative;
+        }
+
+        .pcoded-navbar .pcoded-inner-navbar>li.active>a,
+        .pcoded-navbar .pcoded-inner-navbar>li>a.active>.pcoded-micon {
+            color: #fff;
+        }
+
+        .pcoded-navbar .pcoded-inner-navbar>li>a.active:after {
+            content: "";
+            background-color: #1dc4e9;
+            z-index: 1027;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 3px;
+            height: 100%;
+        }
+
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            background: #04a9f5;
+            box-shadow: none;
+        }
+
+        pre[class*=language-]>code {
+            border-left: 5px solid #04a9f5;
+        }
+
+        .nav-pills>li i {
+            display: inline-block;
+            font-size: 15px;
+            padding: 0 0;
+        }
+    </style>
+</head>
+
+<body>
+<!-- [ navigation menu ] start -->
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="index.html">
+                <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+                <img class="img-fluid logo-thumb" src="assets/images/logo-thumb.png" alt="Theme-Logo" />
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Getting started</label>
+                </li>
+                <li class="nav-item"><a href="#home" class="nav-link active"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Barac io</span></a></li>
+                <li class="nav-item"><a href="#installation" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Installation</span></a></li>
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Structure</label>
+                </li>
+                <li class="nav-item"><a href="#filestruct" class="nav-link"><span class="pcoded-micon"><i class="far fa-folder-open"></i></span><span class="pcoded-mtext">File Structure</span></a></li>
+                <li class="nav-item"><a href="#routing-struct" class="nav-link"><span class="pcoded-micon"><i class="feather icon-link-2"></i></span><span class="pcoded-mtext">Routing & Code Splitting</span></a></li>
+                <li class="nav-item pcoded-menu-caption">
+                    <label>layouts</label>
+                </li>
+                <li class="nav-item"><a href="#layouts" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Layout</span></a></li>
+                <li class="nav-item"><a href="#config-option" class="nav-link"><span class="pcoded-micon"><i class="feather icon-scissors"></i></span><span class="pcoded-mtext">Customizer Options</span></a></li>
+                <li class="nav-item"><a href="#menucust" class="nav-link"><span class="pcoded-micon"><i class="feather icon-scissors"></i></span><span class="pcoded-mtext">Theme Customizer</span></a></li>
+                <li class="nav-item"><a href="#scss" class="nav-link"><span class="pcoded-micon"><i class="fab fa-sass"></i></span><span class="pcoded-mtext">Scss variables</span></a></li>
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Resources</label>
+                </li>
+                <li class="nav-item"><a href="#plugins" class="nav-link"><span class="pcoded-micon"><i class="fas fa-plug"></i></span><span class="pcoded-mtext">Plugins</span></a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link"><span class="pcoded-micon"><i class="feather icon-help-circle"></i></span><span class="pcoded-mtext">FAQ</span></a></li>
+                <li class="nav-item"><a href="#cl" class="nav-link"><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">Change Log</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- [ navigation menu ] end -->
+
+<!-- [ Header ] start -->
+<header class="navbar pcoded-header navbar-expand-lg navbar-light">
+    <div class="m-header">
+        <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
+        <a href="index.html">
+            <img class="img-fluid" src="assets/images/logo.png" alt="Theme-Logo" />
+        </a>
+    </div>
+    <a class="mobile-menu" id="mobile-header" href="javascript:">
+        <i class="feather icon-more-horizontal"></i>
+    </a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li><a href="javascript:" class="full-screen" onclick="javascript:toggleFullScreen()"><i class="feather icon-maximize"></i></a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <!--<li>
+                <form action="https://themeforest.net/user/codedthemes/portfolio" target="_blank">
+                    <button type="submit" class="btn btn-primary shadow-none"><i class="feather icon-shopping-cart"></i>Buy now</button>
+                </form>
+            </li>-->
+            <li>
+                <form action="https://codedthemes.support-hub.io/" target="_blank">
+                    <button type="submit" class="btn btn-secondary"><i class="far fa-life-ring"></i>Support</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</header>
+<!-- [ Header ] end -->
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container" id="home">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Barac io v1.0 Documentation</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <p>Barac io admin template is <code>react + redux admin template</code> based on <code>create react app</code>, <code>redux</code>, <code>BS4</code> with variety feature. Barac io is not an ordinary admin panel template - It has lots of pre-define functionality which completely ready for any complex projects!!</p>
+                                        <h6 class="d-inline">Author : </h6>
+                                        <p class="d-inline">Codedthemes</p>
+                                        <br>
+                                        <h6 class="d-inline">Support : </h6>
+                                        <p class="d-inline"><a href="https://codedthemes.support-hub.io/" target="_blank">https://codedthemes.support-hub.io/</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card" id="installation">
+                                    <div class="card-header">
+                                        <h5>Barac io v1.0 Installation</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="recommendations">
+                                            <h4>Quick Install - </h4>
+                                            <div style="margin-left:30px;">
+                                                <p> - First of all it's required to install latest Node and npm - <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">nodejs</a></p>
+												<p> - Unzip <code>datta-able-react.zip</code> file, Inside that directory you will find the <code>datta-able-react/</code> folder</p>
+												<p> - Open your terminal/cmd then navigate to project directory <code>datta-able-react/</code></p>
+												<p> - Install npm packages using command <code>'npm install'</code>,  this will install required node.js third-party plugins into the <code>node_modules/</code> folder.</p>
+												<p> - Compile/Run project using  command  <code>'npm start'</code>, this will compile app in development mode.</p>
+												<p> - Open <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">http://localhost:3000</a> to view it on browser.</p>
+												<p> - Now, You can use Barac io React Admin Template for your application development. </p>
+
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        The project was built assuming it is hosted at the server root folder of domain/platform i.e http://demo.com.
+
+                                                        You can control this with the homepage field in your package.json.
+                                                        To deploy build for sub-folder i.e http://demo.com/project-folder-name/ than "homepage" : "http://demo.com/project-folder-name/".
+
+                                                        You  also need to set basename in ../src/config.js file.
+                                                        like, basename: '/project-folder-name'
+                                                    </code>
+                                                </pre>
+
+                                                <p> - Build project using command <code>'npm run build'</code>, It will create <code>build/</code> folder inside datta-able-react/ folder. </p>
+                                                <p> - Your app is ready to be deployed. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card" id="filestruct">
+                                    <div class="card-header">
+                                        <h5>File Structure</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <pre>
+                                            <code class="language-markup">
+                                                datta-able-react/
+                                                    ├── node_modules/
+                                                    ├── public/
+                                                        ├── assets/
+                                                            ├── fonts/
+                                                        ├── favicon.ico
+                                                        ├── index.html
+                                                        ├── manifest.json
+                                                    ├── src/
+                                                        ├── App/..
+                                                            ├── components/
+                                                            ├── layout/
+                                                                ├── AdminLayout/
+                                                                    ├── Breadcrumb/
+                                                                    ├── NavBar/
+                                                                    ├── Navigation/
+                                                                    ├── app.scss
+                                                                    ├── index.js
+                                                                ├── AuthLayout/
+                                                                ├── Loader/
+                                                                ├── ScrollToTop/
+                                                                ├── index.js
+                                                        ├── assets/
+                                                            ├── images/
+                                                            ├── scss/
+                                                        ├── Demo/
+                                                            ├── AppPages/
+                                                                ├── Gallery/
+                                                                ├── Task/
+                                                                ├── Todo/
+                                                            ├── Authentication/
+                                                                ├── ResetPassword/
+                                                                ├── SignIn/
+                                                                ├── SignUp/
+                                                                ├── ChangePassword.js
+                                                                ├── MapForm.js
+                                                                ├── PersonalInfo.js
+                                                                ├── ProfileSettings.js
+                                                                ├── Subscribe.js
+                                                            ├── Chart/
+                                                                ├── AmChart/
+                                                                ├── ChartJs/
+                                                                ├── EChart/
+                                                                ├── GoogleChart/
+                                                                ├── HighChart/
+                                                                ├── Nvd3Chart/
+                                                                ├── PeityChart/
+                                                                ├── RadialChart/
+                                                                ├── ReChart/
+                                                            ├── Dashboard/
+                                                                ├── Analytics.js
+                                                                ├── Crm.js
+                                                                ├── Crypto.js
+                                                                ├── Default.js
+                                                                ├── Ecommerce.js
+                                                                ├── Project.js
+                                                            ├── Extension/
+                                                                ├── Editor/
+                                                                ├── Invoice/
+                                                                ├── FileUpload.js
+                                                                ├── FullEventCalendar.js
+                                                            ├── Forms/
+                                                                ├── FormsAdvance.js
+                                                                ├── FormsElements.js
+                                                                ├── FormsMasking.js
+                                                                ├── FormsPicker.js
+                                                                ├── FormsSelect.js
+                                                                ├── FormsValidation.js
+                                                                ├── FormsWizard.js
+                                                            ├── Landing/
+                                                            ├── Maintenance/
+                                                                ├── ComingSoon.js
+                                                                ├── Error.js
+                                                                ├── OfflineUI.js
+                                                            ├── Maps/
+                                                                ├── GoogleMap/
+                                                                ├── VectorMap/
+                                                            ├── Other/
+                                                                ├── SamplePage.js
+                                                            ├── PageLayout/
+                                                                ├── PreBuilt/
+                                                                ├── Vertical/
+                                                                ├── BoxLayout.js
+                                                                ├── ColorIcon.js
+                                                                ├── DarkLayout.js
+                                                                ├── Horizontal.js
+                                                                ├── LightLayout.js
+                                                                ├── RtlLayout.js
+                                                            ├── Tables/
+                                                                ├── BootstrapTable/
+                                                                ├── DataTable/
+                                                            ├── UIElements/
+                                                                ├── Advance/
+                                                                ├── Basic/
+                                                            ├── Widget/
+                                                                ├── Chart.js/
+                                                                ├── DataUserList.js/
+                                                                ├── Data.js/
+                                                                ├── Statistics.js/
+                                                                ├── Table.js/
+                                                                ├── Users.js/
+                                                            ├── AppPages/..
+                                                        ├── hoc/
+                                                            ├── Aux/
+                                                        ├── store/
+                                                            ├── actions.js
+                                                            ├── constant.js
+                                                            ├── reducer.js
+                                                        ├── config.js
+                                                        ├── index.js
+                                                        ├── menu-items.js
+                                                        ├── route.js
+                                                        ├── routes.js
+                                                    ├── .gitignore
+                                                    ├── package.json
+                                                    ├── README.md
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card" id="routing-struct">
+                                    <div class="card-header">
+                                        <h5>Routing & Code Splitting</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <p>Barac io React routing system based on <a href="https://reacttraining.com/react-router/" target="_blank">react-router</a> It's also use code splitting for better performance.</p>
+                                        <pre>
+                                            <code class="language-markup">
+                                                How Can I add new page with menu item?
+
+                                                You can use the below explanation to add/remove menu routs and their menu items.
+                                            </code>
+                                        </pre>
+                                        <h4 class="m-t-25"> Configure Route </h4>
+                                        <p>IF you want to add Test Component and set it into menu-item follow below steps.</p>
+                                        <p><strong>Step 1: </strong> Create <code>Test.js</code> file at directory <code>../src/Demo/</code> and add below code.</p>
+                                        <pre>
+                                            <code class="language-jsx">
+                                                import React, {Component} from 'react';
+
+                                                class Test extends Component {
+                                                    render() {
+                                                        return (
+                                                            //Page Content
+                                                        );
+                                                    }
+                                                }
+
+                                                export default SamplePage;
+                                            </code>
+                                        </pre>
+                                        <p><strong>Step 2: </strong> Open file <code>../src/route.js</code>(for basic admin layout, nav, side-bar, etc.) OR <code>../src/routes.js</code> (for blank page like, login, error, etc)</p>
+                                        <p><strong>Step 3: </strong> Open file <code>../src/menu-items.js</code> and add below code in opened file.</p>
+                                        <pre>
+                                            <code class="language-jsx">
+                                                export default {
+                                                    items: [
+                                                        {
+                                                            id: 'other',
+                                                            title: 'Other',
+                                                            type: 'group',
+                                                            icon: 'icon-other',
+                                                            children: [
+                                                                ...
+                                                                {
+                                                                    id: 'test-page',
+                                                                    title: 'Test',
+                                                                    type: 'item',
+                                                                    icon: 'feather icon-menu',
+                                                                    url: '/test'
+                                                                },
+                                                                ...
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            </code>
+                                        </pre>
+                                        <p><strong>Step 4: </strong> Add below code like code splitting in opened file <code>route.js</code> or <code>routes.js</code></p>
+                                        <pre>
+                                            <code class="language-jsx">
+                                                const TestPage = React.lazy(() => import('./Demo/Test'));
+                                                const routes = [
+                                                    ...
+                                                    { path: '/test', exact: true, name: 'Test', component: TestPage }
+                                                    ...
+                                                ]
+                                            </code>
+                                        </pre>
+                                        <p><strong>Step 5: </strong> Now Test page is ready to use, open url like, <a href="http://localhost:3000/test" target="_blank">http://localhost:3000/test</a> </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="card " id="layouts">
+                                    <div class="card-header">
+                                        <h5>Theme Layouts</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <h5 class="m-15">Open <code>config.ts</code> file from directory <mark>[ ../src/config.ts ]</mark> and change options in this file. </h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead class="header-table">
+                                                <tr>
+                                                    <th>Layout</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Vertical</td>
+                                                        <td>
+                                                            <ul> Default Configuration
+                                                                <li>basename: set basename path for <code>BrowserRouter</code>, like <mark>/datta-able-react</mark></li>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>null</code></li>
+                                                                <li>collapseMenu: <code>false</code></li>
+                                                                <li>layoutType: <code>menu-dark</code></li>
+                                                                <li>navIconColor: <code>false</code></li>
+                                                                <li>headerBackColor: <code>header-default</code></li>
+                                                                <li>navBackColor: <code>navbar-default</code></li>
+                                                                <li>navBrandColor: <code>brand-default</code></li>
+                                                                <li>navBackImage: <code>false</code></li>
+                                                                <li>rtlLayout: <code>false</code></li>
+                                                                <li>navFixedLayout: <code>true</code></li>
+                                                                <li>headerFixedLayout: <code>false</code></li>
+                                                                <li>boxLayout: <code>false</code></li>
+                                                                <li>navDropdownIcon: <code>style1</code></li>
+                                                                <li>navListIcon: <code>style1</code></li>
+                                                                <li>navActiveListColor: <code>sctive-default</code></li>
+                                                                <li>navListTitleColor: <code>title-default</code></li>
+                                                                <li>navListTitleHide: <code>false</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Horizontal</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>horizontal</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 2</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>layout-2</code></li>
+                                                                <li>configBlock: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 2-2</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>layout-2-2</code></li>
+                                                                <li>configBlock: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 3</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>layout-3</code></li>
+                                                                <li>configBlock: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 4</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>layout-4</code></li>
+                                                                <li>configBlock: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 4-2</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>layout-4-2</code></li>
+                                                                <li>configBlock: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 5h</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>horizontal</code></li>
+                                                                <li>collapseMenu: <code>false</code></li>
+                                                                <li>layoutType: <code>menu-light</code></li>
+                                                                <li>navIconColor: <code>true</code></li>
+                                                                <li>headerBackColor: <code>header-blue</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 6</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>layout-6</code></li>
+                                                                <li>layoutType: <code>menu-light</code></li>
+                                                                <li>navBrandColor: <code>brand-lightblue</code></li>
+                                                                <li>navFixedLayout: <code>false</code></li>
+                                                                <li>headerFixedLayout: <code>false</code></li>
+                                                                <li>layout6Background: <code>#23b7e5</code></li>
+                                                                <li>layout6BackSize: <code>auto or cover</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pre Build Layout 8</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>preLayout: <code>layout-8</code></li>
+                                                                <li>layoutType: <code>menu-light</code></li>
+                                                                <li>headerBackColor: <code>header-lightblue</code></li>
+                                                                <li>navBrandColor: <code>brand-lightblue</code></li>
+                                                                <li>navFixedLayout: <code>true</code></li>
+                                                                <li>headerFixedLayout: <code>true</code></li>
+                                                                <li>navActiveListColor: <code>active-lightblue</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Static Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>navFixedLayout: <code>false</code></li>
+                                                                <li>headerFixedLayout: <code>false</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fixed Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>navFixedLayout: <code>true</code></li>
+                                                                <li>headerFixedLayout: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Navbar Fixed Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>navFixedLayout: <code>true</code></li>
+                                                                <li>headerFixedLayout: <code>false</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Collapse Menu Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>collapseMenu: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Box Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>boxLayout: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>RTL Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>rtlLayout: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Light Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>layoutType: <code>menu-light</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Dark Layout</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>layoutType: <code>dark</code></li>
+                                                                <li>navBackColor: <code>navbar-dark</code></li>
+                                                                <li>navBrandColor: <code>brand-dark</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Color Icon</td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>layout: <code>vertical</code></li>
+                                                                <li>navListTitleColor: <code>true</code></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div class="card " id="config-option">
+                                    <div class="card-header">
+                                        <h5>Configuration Options</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead class="header-table">
+                                                <tr>
+                                                    <th>Option</th>
+                                                    <th>Default</th>
+                                                    <th>Type</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>layout</td>
+                                                    <td>vertical</td>
+                                                    <td>string</td>
+                                                    <td><code>vertical</code>, <code>horizontal</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>preLayout</td>
+                                                    <td>null</td>
+                                                    <td>string</td>
+                                                    <td><code>layout-2</code>, <code>layout-2-2</code>, <code>layout-3</code>, <code>layout-4</code>, <code>layout-4-2</code>, <code>layout-6</code>, <code>layout-8</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>collapseMenu</td>
+                                                    <td>false</td>
+                                                    <td>boolean</td>
+                                                    <td><code>false</code>, <code>true</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>layoutType</td>
+                                                    <td>menu-dark</td>
+                                                    <td>string</td>
+                                                    <td><code>menu-dark</code>, <code>menu-light</code>, <code>dark</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navIconColor</td>
+                                                    <td>false</td>
+                                                    <td>boolean</td>
+                                                    <td><code>true</code>, <code>false</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>headerBackColor</td>
+                                                    <td>header-default</td>
+                                                    <td>string</td>
+                                                    <td><code>header-default</code>, <code>header-blue</code>, <code>header-red</code>, <code>header-purple</code>, <code>header-lightblue</code>, <code>header-dark</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navBackColor</td>
+                                                    <td>navbar-default</td>
+                                                    <td>string</td>
+                                                    <td><code>navbar-default</code>, <code>navbar-blue</code>, <code>navbar-red</code>, <code>navbar-purple</code>, <code>navbar-lightblue</code>, <code>navbar-dark</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navBrandColor</td>
+                                                    <td>brand-default</td>
+                                                    <td>string</td>
+                                                    <td><code>brand-default</code>, <code>brand-blue</code>, <code>brand-red</code>, <code>brand-purple</code>, <code>brand-lightblue</code>, <code>brand-dark</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navBackImage</td>
+                                                    <td>null</td>
+                                                    <td>string</td>
+                                                    <td><code>navbar-image-1</code>, <code>navbar-image-2</code>, <code>navbar-image-3</code>, <code>navbar-image-4</code>, <code>navbar-image-5</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>rtlLayout</td>
+                                                    <td>false</td>
+                                                    <td>boolean</td>
+                                                    <td><code>false</code>, <code>true</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navFixedLayout</td>
+                                                    <td>true</td>
+                                                    <td>boolean</td>
+                                                    <td><code>false</code>, <code>true</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>headerFixedLayout</td>
+                                                    <td>false</td>
+                                                    <td>boolean</td>
+                                                    <td><code>false</code>, <code>true</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>boxLayout</td>
+                                                    <td>false</td>
+                                                    <td>boolean</td>
+                                                    <td><code>false</code>, <code>true</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navDropdownIcon</td>
+                                                    <td>style1</td>
+                                                    <td>string</td>
+                                                    <td><code>style1</code>, <code>style2</code>, <code>style3</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navListIcon</td>
+                                                    <td>style1</td>
+                                                    <td>string</td>
+                                                    <td><code>style1</code>, <code>style2</code>, <code>style3</code>, <code>style4</code>, <code>style5</code>, <code>style6</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navActiveListColor</td>
+                                                    <td>active-default</td>
+                                                    <td>string</td>
+                                                    <td><code>active-default</code>, <code>active-blue</code>, <code>active-red</code>, <code>active-purple</code>, <code>active-lightblue</code>, <code>active-dark</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navListTitleColor</td>
+                                                    <td>title-default</td>
+                                                    <td>string</td>
+                                                    <td><code>title-default</code>, <code>title-blue</code>, <code>title-red</code>, <code>title-purple</code>, <code>title-lightblue</code>, <code>title-dark</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>navListTitleHide</td>
+                                                    <td>false</td>
+                                                    <td>boolean</td>
+                                                    <td><code>false</code>, <code>true</code></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>configBlock</td>
+                                                    <td>false</td>
+                                                    <td>boolean</td>
+                                                    <td><code>false</code>, <code>true</code> (used for only preLayout)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>layout6Background</td>
+                                                    <td>#23b7e5</td>
+                                                    <td>string</td>
+                                                    <td>
+                                                        <code>Note: </code> used only for <code> preLayout: layout-6</code>
+                                                        <h6 class="mt-2">Background Color</h6>
+                                                        <ul>
+                                                            <li>#04a9f5</li>
+                                                            <li>#ff5252</li>
+                                                            <li>#9575CD</li>
+                                                            <li>#23b7e5</li>
+                                                            <li>#424448</li>
+                                                            <li>linear-gradient(to right, #1de9b6 0%, #1dc4e9 100%)</li>
+                                                            <li>linear-gradient(to right, #899FD4 0%, #A389D4 100%)</li>
+                                                            <li>linear-gradient(to right, #4facfe 0%, #00f2fe 100%)</li>
+                                                            <li>linear-gradient(to right, #667eea 0%, #764ba2 100%)</li>
+                                                            <li>linear-gradient(to right, #f77062 0%, #fe5196 100%)</li>
+                                                            <li>linear-gradient(to right, #9be15d 0%, #00e3ae 100%)</li>
+                                                            <li>linear-gradient(to right, #b224ef 0%, #7579ff 100%)</li>
+                                                            <li>linear-gradient(to right, #0acffe 0%, #495aff 100%)</li>
+                                                            <li>linear-gradient(to right, #01a9ac 0%, #01dbdf 100%)</li>
+                                                            <li>linear-gradient(to right, #fe5d70 0%, #fe909d 100%)</li>
+                                                            <li>linear-gradient(to right, #0ac282 0%, #0df3a3 100%)</li>
+                                                            <li>linear-gradient(to right, #fe9365 0%, #feb798 100%)</li>
+                                                            <li>linear-gradient(to right, #A445B2 0%, #D41872 52%, #FF0066 100%)</li>
+                                                        </ul>
+                                                        <h6 class="mt-2">Background Image</h6>
+                                                        <ul>
+                                                            <li>url("assets/images/bg-images/bg1.jpg")</li>
+                                                            <li>url("assets/images/bg-images/bg3.jpg")</li>
+                                                            <li>url("assets/images/bg-images/bg4.jpg")</li>
+                                                            <li>url("assets/images/bg-images/bg5.jpg")</li>
+                                                        </ul>
+                                                        <h6 class="mt-2">Background Pattern</h6>
+                                                        <ul>
+                                                            <li>url("assets/images/bg-images/1.png")</li>
+                                                            <li>url("assets/images/bg-images/2.png")</li>
+                                                            <li>url("assets/images/bg-images/3.png")</li>
+                                                            <li>url("assets/images/bg-images/4.png")</li>
+                                                            <li>url("assets/images/bg-images/5.png")</li>
+                                                            <li>url("assets/images/bg-images/6.png")</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>layout6BackSize</td>
+                                                    <td>''</td>
+                                                    <td>string</td>
+                                                    <td><code>auto</code>, <code>cover</code></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12" id="menucust">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Header background</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-pills" id="hcol-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="hcol-default-tab" data-toggle="pill" href="#hcol-default" role="tab" aria-controls="hcol-default" aria-selected="true">Default</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-blue" id="hcol-primary-tab" data-toggle="pill" href="#hcol-primary" role="tab" aria-controls="hcol-primary" aria-selected="false">Blue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-red" id="hcol-danger-tab" data-toggle="pill" href="#hcol-danger" role="tab" aria-controls="hcol-danger" aria-selected="false">Red</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-purple" id="hcol-success-tab" data-toggle="pill" href="#hcol-success" role="tab" aria-controls="hcol-success" aria-selected="false">Purple</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-lightblue" id="hcol-warning-tab" data-toggle="pill" href="#hcol-warning" role="tab" aria-controls="hcol-warning" aria-selected="false">Lightblue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-dark" id="hcol-info-tab" data-toggle="pill" href="#hcol-info" role="tab" aria-controls="hcol-info" aria-selected="false">Dark</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pt-2" id="hcol-tabContent">
+                                            <div class="tab-pane show active" id="hcol-default" role="tabpanel" aria-labelledby="hcol-default-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'headerBackColor': 'header-default'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img header-color">
+                                                            <a href="#!" data-value="header-default"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="hcol-primary" role="tabpanel" aria-labelledby="hcol-primary-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'headerBackColor': 'header-blue'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img header-color">
+                                                            <a href="#!" data-value="header-blue"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="hcol-danger" role="tabpanel" aria-labelledby="hcol-danger-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'headerBackColor': 'header-red'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img header-color">
+                                                            <a href="#!" data-value="header-red"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="hcol-success" role="tabpanel" aria-labelledby="hcol-success-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'headerBackColor': 'header-purple'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img header-color">
+                                                            <a href="#!" data-value="header-purple"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="hcol-warning" role="tabpanel" aria-labelledby="hcol-warning-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'headerBackColor': 'header-lightblue'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img header-color">
+                                                            <a href="#!" data-value="header-lightblue"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="hcol-info" role="tabpanel" aria-labelledby="hcol-info-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'headerBackColor': 'header-dark'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img header-color">
+                                                            <a href="#!" data-value="header-dark"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Menu background</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-pills" id="mcol-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="mcol-default-tab" data-toggle="pill" href="#mcol-default" role="tab" aria-controls="mcol-default" aria-selected="true">Default</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-blue" id="mcol-primary-tab" data-toggle="pill" href="#mcol-primary" role="tab" aria-controls="mcol-primary" aria-selected="false">blue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-red" id="mcol-danger-tab" data-toggle="pill" href="#mcol-danger" role="tab" aria-controls="mcol-danger" aria-selected="false">red</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-purple" id="mcol-success-tab" data-toggle="pill" href="#mcol-success" role="tab" aria-controls="mcol-success" aria-selected="false">purple</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-lightblue" id="mcol-warning-tab" data-toggle="pill" href="#mcol-warning" role="tab" aria-controls="mcol-warning" aria-selected="false">lightblue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-dark" id="mcol-info-tab" data-toggle="pill" href="#mcol-info" role="tab" aria-controls="mcol-info" aria-selected="false">dark</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pt-2" id="mcol-tabContent">
+                                            <div class="tab-pane show active" id="mcol-default" role="tabpanel" aria-labelledby="mcol-default-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackColor': 'navbar-default'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-color">
+                                                            <a href="#!" data-value="navbar-default"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mcol-primary" role="tabpanel" aria-labelledby="mcol-primary-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackColor': 'navbar-blue'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-color">
+                                                            <a href="#!" data-value="navbar-blue"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mcol-danger" role="tabpanel" aria-labelledby="mcol-danger-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackColor': 'navbar-red'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-color">
+                                                            <a href="#!" data-value="navbar-red"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mcol-success" role="tabpanel" aria-labelledby="mcol-success-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackColor': 'navbar-purple'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-color">
+                                                            <a href="#!" data-value="navbar-purple"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mcol-warning" role="tabpanel" aria-labelledby="mcol-warning-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackColor': 'navbar-lightblue'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-color">
+                                                            <a href="#!" data-value="navbar-lightblue"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mcol-info" role="tabpanel" aria-labelledby="mcol-info-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackColor': 'navbar-dark'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-color">
+                                                            <a href="#!" data-value="navbar-dark"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Menu background image</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-pills" id="mimg-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="mimg-default-tab" data-toggle="pill" href="#mimg-default" role="tab" aria-controls="mimg-default" aria-selected="true">Image 1</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="mimg-primary-tab" data-toggle="pill" href="#mimg-primary" role="tab" aria-controls="mimg-primary" aria-selected="false">Image 2</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="mimg-danger-tab" data-toggle="pill" href="#mimg-danger" role="tab" aria-controls="mimg-danger" aria-selected="false">Image 3</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="mimg-success-tab" data-toggle="pill" href="#mimg-success" role="tab" aria-controls="mimg-success" aria-selected="false">Image 4</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="mimg-warning-tab" data-toggle="pill" href="#mimg-warning" role="tab" aria-controls="mimg-warning" aria-selected="false">Image 5</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pt-2" id="mimg-tabContent">
+                                            <div class="tab-pane show active" id="mimg-default" role="tabpanel" aria-labelledby="mimg-default-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackImage': 'navbar-image-1'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-images">
+                                                            <a href="#!" data-value="navbar-image-1"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mimg-primary" role="tabpanel" aria-labelledby="mimg-primary-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackImage': 'navbar-image-2'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-images">
+                                                            <a href="#!" data-value="navbar-image-2"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mimg-danger" role="tabpanel" aria-labelledby="mimg-danger-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackImage': 'navbar-image-3'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-images">
+                                                            <a href="#!" data-value="navbar-image-3"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mimg-success" role="tabpanel" aria-labelledby="mimg-success-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackImage': 'navbar-image-4'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-images">
+                                                            <a href="#!" data-value="navbar-image-4"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="mimg-warning" role="tabpanel" aria-labelledby="mimg-warning-tab">
+                                                <div class="row align-items-center">
+                                                    <div class="col-sm-9">
+                                                            <pre>
+                                                                <code class="language-markup">
+                                                                    export default {
+                                                                        'navBackImage': 'navbar-image-5'
+                                                                      }
+                                                                </code>
+                                                            </pre>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="doc-img navbar-images">
+                                                            <a href="#!" data-value="navbar-image-5"><span></span><span></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Menu Active item background</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-pills" id="actcol-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="actcol-default-tab" data-toggle="pill" href="#actcol-default" role="tab" aria-controls="actcol-default" aria-selected="true">Default</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-blue" id="actcol-primary-tab" data-toggle="pill" href="#actcol-primary" role="tab" aria-controls="actcol-primary" aria-selected="false">blue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-red" id="actcol-danger-tab" data-toggle="pill" href="#actcol-danger" role="tab" aria-controls="actcol-danger" aria-selected="false">red</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-purple" id="actcol-success-tab" data-toggle="pill" href="#actcol-success" role="tab" aria-controls="actcol-success" aria-selected="false">purple</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-lightblue" id="actcol-warning-tab" data-toggle="pill" href="#actcol-warning" role="tab" aria-controls="actcol-warning" aria-selected="false">lightblue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-dark" id="actcol-info-tab" data-toggle="pill" href="#actcol-info" role="tab" aria-controls="actcol-info" aria-selected="false">dark</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pt-2" id="actcol-tabContent">
+
+                                            <div class="tab-pane show active" id="actcol-default" role="tabpanel" aria-labelledby="actcol-default-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navActiveListColor': 'active-default'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="actcol-primary" role="tabpanel" aria-labelledby="actcol-primary-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navActiveListColor': 'active-blue'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="actcol-danger" role="tabpanel" aria-labelledby="actcol-danger-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navActiveListColor': 'active-red'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="actcol-success" role="tabpanel" aria-labelledby="actcol-success-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navActiveListColor': 'active-purple'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="actcol-warning" role="tabpanel" aria-labelledby="actcol-warning-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navActiveListColor': 'active-lightblue'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="actcol-info" role="tabpanel" aria-labelledby="actcol-info-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navActiveListColor': 'active-dark'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Menu caption ( title ) color</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-pills" id="mcap-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="mcap-default-tab" data-toggle="pill" href="#mcap-default" role="tab" aria-controls="mcap-default" aria-selected="true">Default</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-blue" id="mcap-primary-tab" data-toggle="pill" href="#mcap-primary" role="tab" aria-controls="mcap-primary" aria-selected="false">blue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-red" id="mcap-danger-tab" data-toggle="pill" href="#mcap-danger" role="tab" aria-controls="mcap-danger" aria-selected="false">red</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-purple" id="mcap-success-tab" data-toggle="pill" href="#mcap-success" role="tab" aria-controls="mcap-success" aria-selected="false">purple</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-lightblue" id="mcap-warning-tab" data-toggle="pill" href="#mcap-warning" role="tab" aria-controls="mcap-warning" aria-selected="false">lightblue</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link h-dark" id="mcap-info-tab" data-toggle="pill" href="#mcap-info" role="tab" aria-controls="mcap-info" aria-selected="false">dark</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pt-2" id="mcap-tabContent">
+                                            <div class="tab-pane show active" id="mcap-default" role="tabpanel" aria-labelledby="mcap-default-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navListTitleColor': 'title-default'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="mcap-primary" role="tabpanel" aria-labelledby="mcap-primary-tab">
+                                                    <pre>
+                                                        <code class="language-markup">
+                                                            export default {
+                                                                'navListTitleColor': 'title-blue'
+                                                            }
+                                                        </code>
+                                                    </pre>
+                                            </div>
+                                            <div class="tab-pane" id="mcap-danger" role="tabpanel" aria-labelledby="mcap-danger-tab">
+                                                    <pre>
+                                                        <code class="language-markup">
+                                                            export default {
+                                                                'navListTitleColor': 'title-red'
+                                                            }
+                                                        </code>
+                                                    </pre>
+                                            </div>
+                                            <div class="tab-pane" id="mcap-success" role="tabpanel" aria-labelledby="mcap-success-tab">
+                                                    <pre>
+                                                        <code class="language-markup">
+                                                            export default {
+                                                                'navListTitleColor': 'title-purple'
+                                                            }
+                                                        </code>
+                                                    </pre>
+                                            </div>
+                                            <div class="tab-pane" id="mcap-warning" role="tabpanel" aria-labelledby="mcap-warning-tab">
+                                                    <pre>
+                                                        <code class="language-markup">
+                                                            export default {
+                                                                'navListTitleColor': 'title-lightblue'
+                                                            }
+                                                        </code>
+                                                    </pre>
+                                            </div>
+                                            <div class="tab-pane" id="mcap-info" role="tabpanel" aria-labelledby="mcap-info-tab">
+                                                    <pre>
+                                                        <code class="language-markup">
+                                                            export default {
+                                                                'navListTitleColor': 'title-dark'
+                                                            }
+                                                        </code>
+                                                    </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Menu List Icon</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-pills" id="miicon-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="miicon-default-tab" data-toggle="pill" href="#miicon-default" role="tab" aria-controls="miicon-default" aria-selected="true">Default</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="miicon-primary-tab" data-toggle="pill" href="#miicon-primary" role="tab" aria-controls="miicon-primary" aria-selected="false"><i class="feather icon-minus"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="miicon-danger-tab" data-toggle="pill" href="#miicon-danger" role="tab" aria-controls="miicon-danger" aria-selected="false"><i class="feather icon-check"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="miicon-success-tab" data-toggle="pill" href="#miicon-success" role="tab" aria-controls="miicon-success" aria-selected="false"><i class="icon feather icon-corner-down-right"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="miicon-warning-tab" data-toggle="pill" href="#miicon-warning" role="tab" aria-controls="miicon-warning" aria-selected="false"><i class="icon feather icon-chevrons-right"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="miicon-info-tab" data-toggle="pill" href="#miicon-info" role="tab" aria-controls="miicon-info" aria-selected="false"><i class="icon feather icon-chevron-right"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pt-2" id="miicon-tabContent">
+                                            <div class="tab-pane show active" id="miicon-default" role="tabpanel" aria-labelledby="miicon-default-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navListIcon': 'style1'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="miicon-primary" role="tabpanel" aria-labelledby="miicon-primary-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navListIcon': 'style2'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="miicon-danger" role="tabpanel" aria-labelledby="miicon-danger-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navListIcon': 'style3'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="miicon-success" role="tabpanel" aria-labelledby="miicon-success-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navListIcon': 'style4'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="miicon-warning" role="tabpanel" aria-labelledby="miicon-warning-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navListIcon': 'style5'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="miicon-info" role="tabpanel" aria-labelledby="miicon-info-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navListIcon': 'style6'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Menu dropdown icon</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="nav nav-pills" id="mdrpicon-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="mdrpicon-default-tab" data-toggle="pill" href="#mdrpicon-default" role="tab" aria-controls="mdrpicon-default" aria-selected="true"><i class="feather icon-chevron-right"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="mdrpicon-primary-tab" data-toggle="pill" href="#mdrpicon-primary" role="tab" aria-controls="mdrpicon-primary" aria-selected="false"><i class="feather icon-chevrons-right"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="mdrpicon-danger-tab" data-toggle="pill" href="#mdrpicon-danger" role="tab" aria-controls="mdrpicon-danger" aria-selected="false"><i class="feather icon-plus"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content pt-2" id="mdrpicon-tabContent">
+                                            <div class="tab-pane show active" id="mdrpicon-default" role="tabpanel" aria-labelledby="mdrpicon-default-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navDropdownIcon': 'style1'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="mdrpicon-primary" role="tabpanel" aria-labelledby="mdrpicon-primary-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navDropdownIcon': 'style2'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                            <div class="tab-pane" id="mdrpicon-danger" role="tabpanel" aria-labelledby="mdrpicon-danger-tab">
+                                                <pre>
+                                                    <code class="language-markup">
+                                                        export default {
+                                                            'navDropdownIcon': 'style3'
+                                                          }
+                                                    </code>
+                                                </pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>RTL Layouts</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <pre>
+                                            <code class="language-markup">
+                                                export default {
+                                                    'rtlLayout': true
+                                                }
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Dark Layouts</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <pre>
+                                            <code class="language-markup">
+                                                export default {
+                                                    'layoutType': 'dark'
+                                                }
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card" id="scss">
+                                    <div class="card-header">
+                                        <h5>SCSS</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <blockquote class="blockquote">
+                                            <h4> How to Compile SCSS? </h4>
+                                            <p class="mb-0"> You need to complile scss when you change scss using <b><a href="http://koala-app.com/" target="_blank">koala</a> scss Compiler</b></p>
+                                        </blockquote>
+
+                                        <h6 class="mt-4 mb-1"><b>List of variables for Barac io design</b></h6>
+
+                                        <p class="mb-0">You can change this <code>_variables.scss</code> at directory <mark>[ ../src/assets/scss/partials/_variables.scss ]</mark> </p>
+                                        <hr>
+                                        <pre>
+                                                <code class="language-scss">
+                                                    // Top bar height
+                                                    $header-height: 70px;
+
+                                                    // Sidebar menu width
+                                                    $Menu-width: 264px;
+
+                                                    // Small menu width
+                                                    $Menu-collapsed-width: 80px;
+
+                                                    // Color list for Barac io Admin Templet
+                                                    // theme color variables
+                                                    $theme-color: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+                                                    $theme-color2: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+                                                    $primary-color: #04a9f5;
+                                                    $warning-color: #f4c22b;
+                                                    $danger-color: #f44236;
+                                                    $success-color: #1de9b6;
+                                                    $purple-color: #a389d4;
+                                                    $info-color: #3ebfea;
+                                                    $dark-color: #37474f;
+                                                    $theme-border: #eaeaea;
+
+                                                    // header colors
+                                                    $brand-background: #3f4d67;
+                                                    $header-dark-background: #3f4d67;
+                                                    $header-dark-text-color: #fff;
+                                                    $header-light-background: #fff;
+                                                    $header-light-text-color: #3f4d67;
+
+                                                    // Sidebar colors
+                                                    $menu-caption-color: #14171d;
+                                                    $menu-dark-background: #3f4d67;
+                                                    $menu-dark-text-color: #a9b7d0;
+                                                    $menu-light-background: #fff;
+                                                    $menu-light-text-color: #3f4d67;
+                                                    $menu-active-color: #04a9f5;
+
+                                                    // dark layout colors
+                                                    $dark-layout: #212224;
+                                                    $dark-layout-font: #adb7be;
+
+                                                    // Menu icon
+                                                    $menu-icon-color: $primary-color, #ff5252, #01a9ac ,#9575CD , #23b7e5, $warning-color;
+
+                                                    // Header background
+                                                    $color-header-name: blue, red, purple, lightblue, dark;
+                                                    $color-header-color: $primary-color, #ff5252, #9575CD ,#23b7e5,lighten($dark-layout,7%);
+
+                                                    // Menu background
+                                                    $color-menu-name: blue, red, purple, lightblue, dark;
+                                                    $color-menu-color: $primary-color, #ff5252, #9575CD ,#23b7e5,lighten($dark-layout,7%);
+
+                                                    // Active background color
+                                                    $color-active-name: blue, red, purple, lightblue, dark;
+                                                    $color-active-color: $primary-color, #ff5252, #9575CD ,#23b7e5,lighten($dark-layout,7%);
+
+                                                    // Menu title color
+                                                    $color-title-name: blue, red, purple, lightblue, dark;
+                                                    $color-title-color: $primary-color, #ff5252, #9575CD ,#23b7e5,lighten($dark-layout,7%);
+
+                                                    // basic variable
+                                                    $theme-font-family: 'Open Sans', sans-serif;
+                                                    $theme-font-size: 14px;
+                                                    $theme-background: #f4f7fa;
+                                                    $theme-font-color: #888;
+                                                    $theme-heading-color: #111;
+                                                </code>
+                                            </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card" id="plugins">
+                                    <div class="card-header">
+                                        <h5>Plugins</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead class="header-table">
+                                                <tr>
+                                                    <th>Plugins Name</th>
+                                                    <th>Third Party Modules</th>
+                                                    <th>Plugins page use</th>
+                                                    <th>Link</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td rowspan="10">Charts</td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>amcharts3</li>
+                                                            <li>@amcharts/amcharts3-react (AmChart3)</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/widget/wdgt-chart" target="_blank">/widget/wdgt-chart</a>
+                                                        <ul>
+                                                            <li>All Dashboard and Widget</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/@amcharts/amcharts3-react" target="_blank">https://www.npmjs.com/package/@amcharts/amcharts3-react</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>@amcharts/amcharts4 (AmChart4)</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/charts/amchart" target="_blank">/charts/amchart</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.amcharts.com/docs/v4/getting-started/integrations/using-react" target="_blank">https://www.amcharts.com/docs/v4/getting-started/integrations/using-react</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ul>
+                                                            <li>echarts</li>
+                                                            <li>echarts-for-react (ECharts)</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/charts/e-chart" target="_blank">/charts/e-chart</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/echarts-for-react" target="_blank">https://www.npmjs.com/package/echarts-for-react</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ul>
+                                                            <li>highcharts</li>
+                                                            <li>highcharts-react-official (HighCharts)</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/widget/wdgt-chart" target="_blank">/widget/wdgt-chart</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/highcharts-react-official" target="_blank">https://www.npmjs.com/package/highcharts-react-official</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td> peity-react</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/charts/peity" target="_blank">/charts/peity</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/peity-react" target="_blank">https://www.npmjs.com/package/peity-react</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ul>
+                                                            <li>chart.js</li>
+                                                            <li>react-chartjs-2</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/charts/chart-js" target="_blank">/charts/chart-js</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-chartjs-2" target="_blank">https://www.npmjs.com/package/react-chartjs-2</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>react-flot</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/widget/wdgt-chart" target="_blank">/widget/wdgt-chart</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-flot" target="_blank">https://www.npmjs.com/package/react-flot</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>react-google-charts</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/charts/google-chart" target="_blank">/charts/google-chart</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-google-charts" target="_blank">https://www.npmjs.com/package/react-google-charts</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>react-nvd3</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/charts/nvd3" target="_blank">/charts/nvd3</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-nvd3" target="_blank">https://www.npmjs.com/package/react-nvd3</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>recharts</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/charts/re-chart" target="_blank">/charts/re-chart</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://recharts.org/" target="_blank">http://recharts.org/</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="7">Editor</td>
+                                                    <td>@ckeditor/ckeditor5-react (CkEditor)</td>
+                                                    <td>
+                                                        -
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html" target="_blank">https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>@ckeditor/ckeditor5-build-classic</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/editor/ck-editor/ck-classic" target="_blank">/editor/ck-editor/ck-classic</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic" target="_blank">https://www.npmjs.com/package/@ckeditor/ckeditor5-build-classic</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>@ckeditor/ckeditor5-build-balloon</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/editor/ck-editor/ck-balloon" target="_blank">/editor/ck-editor/ck-balloon</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/ckeditor/ckeditor5-build-balloon" target="_blank">https://github.com/ckeditor/ckeditor5-build-balloon</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>@ckeditor/ckeditor5-build-inline</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/editor/ck-editor/ck-inline" target="_blank">/editor/ck-editor/ck-inline</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/ckeditor/ckeditor5-build-inline" target="_blank">https://github.com/ckeditor/ckeditor5-build-inline</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>@ckeditor/ckeditor5-build-decoupled-document</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/editor/ck-editor/ck-document" target="_blank">/editor/ck-editor/ck-document</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/ckeditor/ckeditor5-build-decoupled-document" target="_blank">https://github.com/ckeditor/ckeditor5-build-decoupled-document</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>jodit-react (Jodit Editor)</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/editor/jodit-wysiwyg" target="_blank">/editor/jodit-wysiwyg</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/jodit/jodit-react" target="_blank">https://github.com/jodit/jodit-react</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>nib-core (Rich Editor)</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/editor/rich-editor" target="_blank">/editor/rich-editor</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/jpuri/Nib" target="_blank">https://github.com/jpuri/Nib</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Table</td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>datatables.net-bs</li>
+                                                            <li>datatables.net-autofill-bs</li>
+                                                            <li>datatables.net-buttons-bs</li>
+                                                            <li>datatables.net-colreorder-bs</li>
+                                                            <li>datatables.net-dt</li>
+                                                            <li>datatables.net-fixedcolumns-bs</li>
+                                                            <li>datatables.net-fixedheader-bs</li>
+                                                            <li>datatables.net-keytable-bs</li>
+                                                            <li>datatables.net-responsive-bs</li>
+                                                            <li>datatables.net-rowgroup-bs</li>
+                                                            <li>datatables.net-rowreorder-bs</li>
+                                                            <li>datatables.net-scroller-bs</li>
+                                                            <li>datatables.net-select-bs</li>
+                                                            <li>jszip</li>
+                                                            <li>pdfmake</li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/tables/datatable" target="_blank">/tables/datatable</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://datatables.net" target="_blank">https://datatables.net</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="2">Tree View</td>
+                                                    <td>deni-react-treeview</td>
+                                                    <td rowspan="2">
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/tree-view" target="_blank">/advance/tree-view</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/deni-react-treeview" target="_blank">https://www.npmjs.com/package/deni-react-treeview</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>react-animated-tree</td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-animated-tree" target="_blank">https://www.npmjs.com/package/react-animated-tree</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Full Calender</td>
+                                                    <td>fullcalendar-reactwrapper</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/full-calendar" target="_blank">/full-calendar</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/fullcalendar-reactwrapper" target="_blank">https://www.npmjs.com/package/fullcalendar-reactwrapper</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Map</td>
+                                                    <td>google-maps-react (Google Map)</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/maps/google-map" target="_blank">/maps/google-map</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/google-maps-react" target="_blank">https://www.npmjs.com/package/google-maps-react</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>P-Notify</td>
+                                                    <td>pnotify</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/p-notify" target="_blank">/advance/p-notify</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://sciactive.com/pnotify" target="_blank">https://sciactive.com/pnotify</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Syntax Highlighter</td>
+                                                    <td>prism-react-renderer</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/syntax-highlighter" target="_blank">/advance/syntax-highlighter</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/prism-react-renderer" target="_blank">https://www.npmjs.com/package/prism-react-renderer</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Range Slider</td>
+                                                    <td>rc-slider</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/range-slider" target="_blank">/advance/range-slider</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/rc-slider" target="_blank">https://www.npmjs.com/package/rc-slider</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Animation Modal</td>
+                                                    <td>react-animated-modal</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/modal" target="_blank">/advance/modal</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-animated-modal" target="_blank">https://www.npmjs.com/package/react-animated-modal</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>BS4</td>
+                                                    <td>react-bootstrap</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default" target="_blank">common</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://react-bootstrap.github.io/components/alerts" target="_blank">https://react-bootstrap.github.io</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Form Validation</td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>validator</li>
+                                                            <li>react-bootstrap4-form-validation</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/forms/form-validation" target="_blank">/forms/form-validation</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://andyhu92.github.io/react-bootstrap4-form-validation" target="_blank">https://andyhu92.github.io/react-bootstrap4-form-validation</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Color Picker</td>
+                                                    <td>react-color</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/forms/form-picker" target="_blank">/forms/form-picker</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-color" target="_blank">https://www.npmjs.com/package/react-color</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Counter/Timer</td>
+                                                    <td>react-compound-timer</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/task/task-detail" target="_blank">/task/task-detail</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-compound-timer" target="_blank">https://www.npmjs.com/package/react-compound-timer</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="2">Date Picker</td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>react-datepicker</li>
+                                                            <li>date-fns</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/datepicker" target="_blank">/advance/datepicker</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-datepicker" target="_blank">https://www.npmjs.com/package/react-datepicker</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>react-datetime</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/forms/form-picker" target="_blank">/forms/form-picker</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/YouCanBookMe/react-datetime" target="_blank">https://github.com/YouCanBookMe/react-datetime</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="2">Form Select</td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>react-select</li>
+                                                            <li>chroma-js</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/forms/form-select" target="_blank">/forms/form-select</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://react-select.com/home" target="_blank">https://react-select.com/home</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>react-dual-listbox</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/forms/form-select" target="_blank">/forms/form-select</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-dual-listbox" target="_blank">https://www.npmjs.com/package/react-dual-listbox</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>File Upload</td>
+                                                    <td>react-dropzone-component</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/file-upload" target="_blank">/file-upload</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-dropzone-component" target="_blank">https://www.npmjs.com/package/react-dropzone-component</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Star Rating</td>
+                                                    <td>react-rating</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/rating" target="_blank">/advance/rating</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-rating" target="_blank">https://www.npmjs.com/package/react-rating</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Slider/Carousel</td>
+                                                    <td>react-slick</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/slider" target="_blank">/advance/slider</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-slick" target="_blank">https://www.npmjs.com/package/react-slick</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="2">Light Box</td>
+                                                    <td>react-image-video-lightbox</td>
+                                                    <td rowspan="2">
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/light-box" target="_blank">/advance/light-box</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-image-video-lightbox" target="_blank">https://www.npmjs.com/package/react-image-video-lightbox</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>react-images-texts-videos</td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-images-texts-videos" target="_blank">https://www.npmjs.com/package/react-images-texts-videos</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td rowspan="2">Form Mask</td>
+                                                    <td>react-input-mask</td>
+                                                    <td rowspan="2">
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/forms/form-masking" target="_blank">/forms/form-masking</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-input-mask" target="_blank">https://www.npmjs.com/package/react-input-mask</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>react-number-format</td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-format-number" target="_blank">https://www.npmjs.com/package/react-format-number</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Notes</td>
+                                                    <td>react-stickies</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/todo/todo-notes" target="_blank">/todo/todo-notes</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-stickies" target="_blank">https://www.npmjs.com/package/react-stickies</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Form Advance - Tag Input</td>
+                                                    <td>react-tag-autocomplete</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/forms/form-advance" target="_blank">/forms/form-advance</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-tag-autocomplete" target="_blank">https://www.npmjs.com/package/react-tag-autocomplete</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Notification</td>
+                                                    <td>react-toast-notifications</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/notification" target="_blank">/advance/notification</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-toast-notifications" target="_blank">https://www.npmjs.com/package/react-toast-notifications</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Task Board</td>
+                                                    <td>react-trello</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/task-board" target="_blank">/advance/task-board</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.npmjs.com/package/react-trello" target="_blank">https://www.npmjs.com/package/react-trello</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Tour</td>
+                                                    <td>reactour</td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/tour" target="_blank">/advance/tour</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/elrumordelaluz/reactour" target="_blank">https://github.com/elrumordelaluz/reactour</a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Sweet Alert</td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>sweetalert2</li>
+                                                            <li>sweetalert2-react-content</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <a href="http://html.codedthemes.com/datta-able/react/default/advance/alert" target="_blank">/advance/alert</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://github.com/sweetalert2/sweetalert2-react-content" target="_blank">https://github.com/sweetalert2/sweetalert2-react-content</a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card" id="faq">
+                                    <div class="card-header">
+                                        <h5>FAQ</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                        <a href="#!"><h5 data-toggle="collapse" data-target="#f1" aria-expanded="false" aria-controls="f1">What is <b> Barac io</b>?</h5></a>
+                                        <div class="collapse" id="f1">
+                                            <p class="mb-0">Barac io is responsive admin template/Dattaboard which useful for your complete entire projects like CRM system - Task System - User Management System - Social Dattaboard etc. Without any trouble Barac io gives the perfect outcome with tons of ready made plugins which helps you at every step while creating any project.</p>
+                                        </div>
+                                        <hr>
+                                        <a href="#!"><h5 data-toggle="collapse" data-target="#f2" aria-expanded="false" aria-controls="f2">Why <b>choose</b> Barac io?</h5></a>
+                                        <div class="collapse" id="f2">
+                                            <p class="mb-0">Barac io built using react with redux and angular 7+ and bootstrap's latest version 4 which have complete compatibility on bootstrap4. It is fully crafted for every one's need and its fullfilled those need too. Tons of Plugins, Forms, Charts, Tables, Custom Pages gives extra smoothness in project.</p>
+                                        </div>
+                                        <hr>
+                                        <a href="#!"><h5 data-toggle="collapse" data-target="#f3" aria-expanded="false" aria-controls="f3">Licence <b>terms</b>?</h5></a>
+                                        <div class="collapse" id="f3">
+                                            <p class="mb-0">Barac io comes with single license usage and support for every single purchase. If you want to use Barac io for multiple project you must buy the extra licence for that.</p>
+                                        </div>
+                                        <hr>
+                                        <a href="#!"><h5 data-toggle="collapse" data-target="#f4" aria-expanded="false" aria-controls="f4">What about Item <b>Support</b>?</h5></a>
+                                        <div class="collapse" id="f4">
+                                            <p class="mb-0">We only support those purchaser who purchased Barac io. 6 months included support comes with every single purchase of Barac io.</p>
+                                        </div>
+                                        <hr>
+                                        <a href="#!"><h5 data-toggle="collapse" data-target="#f5" aria-expanded="false" aria-controls="f5">What is Support <b>Turnaround time ?</b></h5></a>
+                                        <div class="collapse" id="f5">
+                                            <p class="mb-0">When you comment or submit the ticket for support. Our team takes it very seriously and respond it within a Half or Full day.</p>
+                                        </div>
+                                        <hr>
+                                        <a href="#!"><h5 data-toggle="collapse" data-target="#f6" aria-expanded="false" aria-controls="f6">How i rate the <b>Barac io ?</b></h5></a>
+                                        <div class="collapse" id="f6">
+                                            <p class="mb-0">It just a simple. Go to your account. Then check your download section where you found Barac io Template. Click on start ratings. Simple !!!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="card" id="cl">
+                                    <div class="card-header">
+                                        <h5>Version Change Log</h5>
+                                        <div class="card-header-right">
+                                            <div class="btn-group card-option">
+                                                <button type="button" class="btn dropdown-toggle btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="feather icon-more-horizontal"></i>
+                                                </button>
+                                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                    <li class="dropdown-item minimize-card"><a href="javascript:"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                                    <li class="dropdown-item close-card"><a href="javascript:"><i class="feather icon-trash"></i> Remove</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-block">
+                                            <pre>
+                                                <code class="language-markup">
+                                                    v1.0
+                                                    -----------
+
+                                                    24-01-2019 - v1.0 Release
+                                                </code>
+                                            </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- [ Main Content ] end -->
+
+<!-- Reqired Js -->
+<script src="assets/js/vendor-all.min.js"></script>
+<script src="assets/js/pcoded.min.js"></script>
+<!-- prism Js -->
+<script src="assets/plugins/prism/js/prism.min.js"></script>
+
+<script type="text/javascript">
+    $('body').scrollspy({
+        target: ".pcoded-inner-navbar"
+    });
+    $('body').scroll(function() {
+        $('.nav-item').removeClass('pcoded-trigger');
+    });
+    $(".pcoded-inner-navbar a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1500, function() {
+                window.location.hash = hash;
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

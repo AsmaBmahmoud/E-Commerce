@@ -1,0 +1,15 @@
+.react-tags {
+  .react-tags__selected-tag {
+    margin: 5px 10px 5px 0;
+    padding: 5px 12px;
+    &:after {
+      color: inherit;
+    }
+  }
+  .react-tags__search {
+    margin: 0;
+    input {
+      background: transparent;
+    }
+  }
+}
