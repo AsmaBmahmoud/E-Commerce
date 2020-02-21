@@ -1,4 +1,4 @@
-# Barac.io
+
 
 ### Installation & Development
 Open your favorite Terminal and run these commands.
